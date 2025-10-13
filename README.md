@@ -19,7 +19,7 @@ Far from finalised, many tuning, much improve, so optimize.
 |----------|---------|-------|
 | **1. Deep Recon** | Enumerates subs, resolves DNS, probes hosts, crawls endpoints | `subfinder`, `dnsx`, `naabu`, `httpx`, `katana`, `waybackurls` |
 | **2. Adaptive Vulnerability Scanning** | Targets high-priority CVEs + fuzzes endpoints dynamically | `nuclei`, `ffuf`, `dalfox` |
-| **3. Reporting ** | Consolidates results into Markdown + JSON reports | Built-in |
+| **3. Reporting** | Consolidates results into Markdown + JSON reports | Built-in |
 
 ##  Repository Layout
 
