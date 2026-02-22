@@ -1,5 +1,5 @@
 #Deep recon probes deep
-name: Deep Recon Pipeline
+name: Recon Pipeline
 
 on:
   push:
