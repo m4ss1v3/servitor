@@ -1,4 +1,4 @@
-name: Adaptive Vulnerability Scanning
+name: Vulnerability Scan
 
 on:
   workflow_dispatch:
@@ -33,7 +33,7 @@ jobs:
       - name: Update Nuclei Templates
         run: nuclei -update-templates
 
-      - name: Run Critical & High Vulnerability Scans
+      - name: Run Vulnerability Scans
         run: |
           nuclei -l live_hosts.txt \
             -t cves/ \
