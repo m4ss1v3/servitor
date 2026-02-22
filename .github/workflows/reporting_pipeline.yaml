@@ -2,7 +2,7 @@ name: Automated Reporting
 
 on:
   workflow_run:
-    workflows: ["Adaptive Vulnerability Scanning"]
+    workflows: ["Vulnerability Scanning"]
     types: [completed]
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
 
       - name: Generate Consolidated Markdown Report
         run: |
-          echo "# Pentest Report - $(date)" > REPORT.md
+          echo "#  Report - $(date)" > REPORT.md
           echo "## High Severity Vulnerabilities" >> REPORT.md
           cat nuclei_high.txt >> REPORT.md
           echo "## Fuzzing Insights" >> REPORT.md
@@ -28,5 +28,5 @@ jobs:
       - name: Upload Final Report
         uses: actions/upload-artifact@v4
         with:
-          name: pentest-report
+          name: report
           path: REPORT.md
